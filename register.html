@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="menu-bar">
+            <h1>The Fashion Pet</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div><!-- form for register new pets-->
+            <h2>Register a new pet</h2>
+            <div class="form-container">
+                <div class="form-control">
+                    <label>Name:</label>
+                    <input type="text" id="txtName">
+                </div>
+                <div class="form-control">
+                    <label>Age:</label>
+                    <input type="text" id="txtAge">
+                </div>
+                <div class="form-control">
+                    <label>Gender:</label>
+                    <input type="text" id="txtGender">
+                </div>
+                <div class="form-control">
+                    <label>Breed:</label>
+                    <input type="text" id="txtBreed">
+                </div>
+
+                <div>
+                    <button onclick="register()">Register</button>
+                </div>
+            </div>
+        </div><!-- end of the form-->
+    </main>
+
+    <section>
+        <h2>Registered pets</h2>
+        <p id="petsCounter"></p>
+        <div id="petNames"></div>
+    </section>
+
+
+    <script src="./scripts/script.js"></script>
+    
+</body>
+</html>
