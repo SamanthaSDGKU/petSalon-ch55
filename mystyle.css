@@ -1,0 +1,8 @@
+.error{
+    background-color: rgb(251, 174, 174);
+    border: 1px solid red;
+}
+
+.hide{
+    display: none;
+}
