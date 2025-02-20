@@ -84,7 +84,6 @@ function deletePet(petId){
 
 function showAlert(msg,type){
     let alertContainer = document.getElementById("alertContainer");
-
     alertContainer.innerHTML=`
         <div id="alert-error" class="alert alert-${type}" role="alert">
             ${msg}
@@ -95,7 +94,15 @@ function showAlert(msg,type){
         document.getElementById("alert-error").remove();
     },3000);// 1000 = 1s
 }
-
+function getServices(){
+    let list = read();// read the services from LS
+    let option="";
+    for(let i=0;i<list.length;i++){
+        let service=list[i];
+        option += `<option value="${service.title}">${service.title} - ${service.price}</option>`;
+    }
+    inputService.innerHTML=option;
+}
 function init(){
     // create three pets
     let pet1 = new Pet("Scooby",65,"Male","Dane","Grooming");
@@ -104,6 +111,7 @@ function init(){
     petList.push(pet1,pet2);
     displayTable();
     displayPetsInfo();
+    getServices();
     document.getElementById("alert-error").classList.add("hide");
 }
 
